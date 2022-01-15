@@ -36,13 +36,13 @@ verifica(2):-
     write(X),write(' usuarios cadastrados'),nl,nl.
 
 verifica(3):-
-    write('Qual o nome do muleque?'),nl,
+    write('Nome do usuário:'),nl,
     le_atomo(X),
-    write('Qual o numero do muleque?'),nl,
+    write('Número do usuário:'),nl,
     verifica_digitos(X).
 
 verifica(4):-
-    write('Qual o nome do arrombado?'),nl,
+    write('Nome do usuário:'),nl,
     le_atomo(X),
     retractall(telefone(X,_)),
     tell('telefone.pl'),
